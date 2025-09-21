@@ -9,7 +9,7 @@ Mục đích: thay đổi nội dung message đã commit sai
 Mục đích: chuyển file từ vùng Staging về vùng Working Directory
 - Cú pháp: 
 1. **git restore --staged <file_name>**: restore 1 file cụ thể
-2. **git restore -staged .**: restore toàn bộ files
+2. **git restore --staged .**: restore toàn bộ files
 
 ### File repository -> working directory
 Mục đích: chuyển file từ vùng File repository về vùng Working Directory
@@ -70,33 +70,40 @@ Mục đích: code theo 1 format, dễ nhìn => teammates dễ hiểu code
 
 ## console.log
 Mục đích: In nội dung mong muốn ra màn hình
-1. console.log('Tôi là Ngân'); => chuỗi trong dấu ''
-2. conslole.log("Tôi là Ngân"); => chuỗi trong dấu ""
-3. let name = "Ngân"; 
-- console.log(`${name}`); => Dùng “backtick”
-- console.log("Tôi tên là " + name);
-- console.log("Tôi tên là " , name);
+~~~
+ console.log('Tôi là Ngân'); => chuỗi trong dấu ''
+ conslole.log("Tôi là Ngân"); => chuỗi trong dấu ""
+ let name = "Ngân"; 
+    console.log(`${name}`); => Dùng “backtick”
+    console.log("Tôi tên là " + name);
+    console.log("Tôi tên là " , name);
+~~~
 
 ## Object
 Mục đích: dùng để lưu trữ tập hợp các giá trị vào cùng một biến hoặc hằng số
-- Cú pháp: **let/const <ten_object> = {**
-    **<thuoc_tinh>: <gia_tri>,**
-    **...**
-**}**
+- Cú pháp: 
+    ~~~ 
+    let/const <ten_object> = {
+        <thuoc_tinh>: <gia_tri>,
+        ...
+    }
+    ~~~
 - <thuoc_tinh>: giống quy tắc đặt tên biến =>**camelCase**
 - <gia_tri>: có thể giống biến, hoặc là 1 object khác
 - Ví dụ:
-    - let student = {
-        - name: "Ngan",
-        - class: {
-            - name: "K18",
-            - subject: "Fullstack Automation"
+    ~~~
+    let student = {
+         name: "Ngan",
+         class: {
+             name: "K18",
+             subject: "Fullstack Automation"
     }
-}
-    - console.log(student.name);
-    - console.log(student.class.subject);
-    - console.log(student["name"]);
-    - console.log(student["class"]["name"]);
+    }
+    console.log(student.name);
+    console.log(student.class.subject);
+    console.log(student["name"]);
+    console.log(student["class"]["name"]);
+    ~~~
 -  Output
     - *Ngan*
     - *Fullstack Automation*
@@ -105,35 +112,43 @@ Mục đích: dùng để lưu trữ tập hợp các giá trị vào cùng mộ
 
 ### Object vs const
 - Nếu bạn thay cả object bằng một object mới=> Lỗi
-    - const student = {“name”: “alex”, “age”: 20}
-    - student = {“name”: “Nagi”, “age”: 18} // lỗi
+    ~~~
+     const student = {“name”: “alex”, “age”: 20}
+     student = {“name”: “Nagi”, “age”: 18} // lỗi
+     ~~~
 - Nếu chỉ thay đổi **thuộc tính** của object thì hợp lệ
-    - const student = {“name”: “alex”, “age”: 20}
-    - student.age = “21”; // Hợp lệ
+    ~~~
+     const student = {“name”: “alex”, “age”: 20}
+     student.age = “21”; // Hợp lệ
+    ~~~
 
 ### Thêm thuộc tính vào Object
 - Cách làm: dùng dấu . hoặc ngoặc vuông [] để định nghĩa thuộc tính mới.
 - Ví dụ
-    - let bike = {
-        - make: 'Honda',
-        - model: 'YZF-R3'
-    - };
-    - **bike.color = "Red";**
-    - **bike["price new"] = 100;**
-    - console.log(bike);
+    ~~~
+     let bike = {
+         make: 'Honda',
+         model: 'YZF-R3'
+     };
+     bike.color = "Red";
+     bike["price new"] = 100;
+     console.log(bike);
+    ~~~
 - Output:
 *{make: 'Honda', model: 'YZF-R3', color: 'Red', ‘price new’ : 100}*
 
 ### Xóa thuộc tính của Object
 - Cách làm: dùng hàm **delete**
 - Ví dụ
-    - let bike = {
-        - make: 'Honda',
-        - model: 'YZF-R3'
-        - color: 'Red';
-    - };
-    - **delete bike.model;**
-    - console.log(bike);
+    ~~~
+     let bike = {
+         make: 'Honda',
+         model: 'YZF-R3'
+         color: 'Red';
+     };
+     delete bike.model;
+     console.log(bike);
+     ~~~
 - Output:
 *{make: 'Honda', color: 'Red'}*
 ## Array
@@ -142,17 +157,21 @@ int array[10] = {35,33,42,10,14,19,27,44,26,31};
 ![Hình ảnh](https://cdn1.byjus.com/wp-content/uploads/2021/09/word-image4.png)
 
 2. Truy xuất mảng
-- console.log("Độ dài của mảng: ", arr.length);
-- console.log("Số ở vị trí index 2 là: ", arr[2]);
+    ~~~
+    console.log("Độ dài của mảng: ", arr.length);
+    console.log("Số ở vị trí index 2 là: ", arr[2]);
+    ~~~
 - Output:
-    - Độ dài của mảng:: 10
-    - Số ở vị trí index 2 là: 42
+    - *Độ dài của mảng: 10*
+    - *Số ở vị trí index 2 là: 42*
 
 3. Hàm push
 Mục đích: Thêm phần tử vào mảng
-    - const arr = [];
-    - arr.push(1, 2, 3);
-    - console.log(arr);
+    ~~~
+     const arr = [];
+     arr.push(1, 2, 3);
+     console.log(arr);
+     ~~~
 - Output: *[1,2,3]*
 
 
