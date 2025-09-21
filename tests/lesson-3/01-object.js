@@ -5,7 +5,7 @@ const car = {
     model: "Corolla",
     year: 2021
 }
-console.log("Năm sản xuất xe là: ", car.year);
+console.log(`Năm sản xuất xe là: ${car.year}`);
 console.log("------------------------------------------------------");
 
 //Tạo một object person có thuộc tính name, address (là một object lồng với các thuộc tính street, city, country). In ra tên đường của người này.
@@ -18,7 +18,7 @@ const person = {
         country: "Việt Nam"
     }
 }
-console.log("Tên đường là: ", person.address.street);
+console.log(`Tên đường là: ${person.address.street}`);
 console.log("------------------------------------------------------");
 
 /* Tạo một object student và truy cập đến điểm môn toán (math) sử dụng ngoặc vuông.
@@ -33,7 +33,7 @@ const student = {
         engish: 7
     }
 }
-console.log("Điểm toán của ", student.name, "bằng", student["grades"]["math"]);
+console.log(`Điểm toán của ${student.name} bằng ${student["grades"]["math"]}`);
 console.log("------------------------------------------------------");
 
 // Tạo một object settings để quản lý cài đặt của ứng dụng với các thuộc tính như volume, brightness. Thay đổi volume và in ra object mới.
