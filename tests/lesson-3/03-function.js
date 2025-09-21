@@ -5,7 +5,7 @@ function multiply(a, b) {
 }
 const m1 = multiply(3, 6);
 const m2 = multiply(4, 9);
-console.log("m1: ", m1, '\t', "m2: ", m2);
+console.log(`m1: ${m1} \t m2: ${m2}`);
 console.log("------------------------------------------------------");
 
 //Viết hàm findMin nhận 3 tham số a, b, c, trả về giá trị nhỏ nhất. Gọi hàm và in kết quả với 2 bộ số khác nhau.
@@ -21,7 +21,7 @@ function findMin(a, b, c) {
 }
 let min1 = findMin(3, 6, 8);
 let min2 = findMin(5, 2, 9);
-console.log("min1: ", min1, "\t", "min2: ", min2);
+console.log(`min1: ${min1} \t min2: ${min2}`);
 console.log("------------------------------------------------------");
 /* Viết hàm getTopStudents nhận 2 tham số:
 ● students: mảng các object, mỗi object chứa name (tên) và score (điểm).
@@ -47,7 +47,7 @@ const students = [
     { name: "Tú", score: 6 }];
 let threshold = 7;
 let topStudent = getTopStudents(students, threshold);
-console.log("Danh sách học sinh đạt yêu cầu: ", topStudent);
+console.log(`Danh sách học sinh đạt yêu cầu: ${topStudent}`);
 console.log("------------------------------------------------------");
 
 /* Viết hàm calculateInterest nhận 3 tham số:
@@ -66,6 +66,6 @@ function calculateInterest(principal, rate, years) {
 
 }
 const totalInterest = calculateInterest(100_000_000, 6, 5)
-console.log("Tổng số tiền sau 5 năm: ", totalInterest);
+console.log(`Tổng số tiền sau 5 năm: ${totalInterest}`);
 console.log("------------------------------------------------------");
 
