@@ -19,21 +19,21 @@ Mục đích: được dùng để quản lý phiên bản và làm việc giữ
 3. **Repository**: các commit
 
 ## Câu lệnh thường dùng
-1. **git init** : Khởi tạo thư mục
-2. **git config --global user.name**: cấu hình default name cho tất cả reposity
-3. **git config --global user.email**: cấu hình default email cho tất cả reposity
-4. **git config user.name**: cấu hình default name cho từng reposity
-5. **git config user.email**: cấu hình default email cho từng reposity
-6. **git config --list**: kiểm tra toàn bộ cấu hình
-7. **git add <file_name>**: thêm 1 file
-8. **git add .**: thêm tất cả các files
-9. **git status**:  kiểm tra trạng thái của các files (xanh: Staging Area - đỏ: Working Directory)
-10. **git commit -m "message"**: commit file
-11. **git log**: kiểm tra lịch sử commit
-12. **git push origin main**: push file lên Github
+1. `git init` : Khởi tạo thư mục
+2. `git config --global user.name`: cấu hình default name cho tất cả reposity
+3. `git config --global user.email`: cấu hình default email cho tất cả reposity
+4. `git config user.name`: cấu hình default name cho từng reposity
+5. `git config user.email`: cấu hình default email cho từng reposity
+6. `git config --list`: kiểm tra toàn bộ cấu hình
+7. `git add <file_name>`: thêm 1 file
+8. `git add .`: thêm tất cả các files
+9. `git status`:  kiểm tra trạng thái của các files (xanh: Staging Area - đỏ: Working Directory)
+10. `git commit -m "message"`: commit file
+11. `git log`: kiểm tra lịch sử commit
+12. `git push origin main`: push file lên Github
 
 ## Git -commit convention
-Message:< type >: <short_description>
+Message:`< type >: <short_description>`
 
 **type**:
 - *chore*: sửa nhỏ lẻ, chính tả, xóa file
@@ -48,12 +48,12 @@ Mục đích: giúp cho browser hoạt động
 - Khi chạy trên máy tính, không có browser engine, dùng NodeJS
 ## JavaScript - Hello world!
 1. Cú pháp in nội dung ra màn hình: 
-- console.log("nội dung");  
-- console.log('nội dung');
+- `console.log("nội dung");`  
+- `console.log('nội dung');`
 
-2. Cú pháp chạy lệnh
-- node <tên file>
-- node <đường dẫn tới file>
+2. Cú pháp chạy lệnh trên VSC
+- `node <tên file>`
+- `node <đường dẫn tới file>`
 
 ## JavaScript - Basic
 ### Comment
@@ -63,7 +63,7 @@ Mục đích: vô hiệu hóa tạm thời 1 đoạn code, code trong comment s�
 
 ### Biến (let/var)
 **Biến** là khái niệm cơ bản nhất, biến trong "biến thiên", có thể thay đổi
-1. Cú pháo khai báo biến: *let/var* <tên biến> = <giá trị>
+1. Cú pháo khai báo biến: *let/var* `<tên biến> = <giá trị>`
 - **let** ra đời sau, hiện đại và an toàn hơn
 - **var** ra đời trước, cũ và ít sử dụng
 - **var** cho phép khai báo lại, **let** thì không
@@ -75,7 +75,7 @@ Mục đích: vô hiệu hóa tạm thời 1 đoạn code, code trong comment s�
 
 ### Hằng (const)
 **Hằng** là giá trị không thay đổi được, hằng trong "hằng số"
-Cú pháo khai báo hằng: *const* <tên hằng> = <giá trị>
+Cú pháo khai báo hằng: *const* `<tên hằng> = <giá trị>`
 
 ### Khi nào dùng hằng, khi nào dùng biến?
 - Mặc định dùng **const**, khi cần gán lại giá trị dùng **let**
@@ -164,15 +164,19 @@ Ví dụ
 ### Câu điều kiện
 Mục đích: dùng để kiểm tra một đoạn logic trước khi chạy. Nếu điều kiện đúng thì mới chạy
 Cú pháp: **if**
-- *if (<điều kiện>) {
+```javascript
+if (<điều kiện>) {
 // code...
-}*
+}
+```
 ### Vòng lặp
 Mục đích: dùng để lặp lại 1 đoạn logic. Có thể lặp một số lần nhất định, hoặc lặp vô hạn, tuỳ theo điều kiện dừng
 Cú pháp vòng lặp **for (i)**
-- *for (<điều kiện khởi tạo>; <điều kiện lặp>; <cập nhật>) {
+```javascript
+for (<điều kiện khởi tạo>; <điều kiện lặp>; <cập nhật>) {
 // code
-}*
+}
+```
 
 Trong đó:
 - Điều kiện khởi tạo: chạy một lần duy nhất, khi vòng lặp bắt đầu.
