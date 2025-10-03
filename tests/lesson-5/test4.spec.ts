@@ -1,4 +1,4 @@
-import { Expect, test } from "@playwright/test";
+import { test } from "@playwright/test";
 
 test('Add personal notes', async ({ page }) => {
     const noteList = [
@@ -24,7 +24,7 @@ test('Add personal notes', async ({ page }) => {
     await test.step('Add 10 notes', async () => {
         for (const note of noteList) {
             await page.locator(`//input[@id='note-title']`).fill(note.title);
-            await page.locator(`//textarea[@id='note-content']`).fill(note.title);
+            await page.locator(`//textarea[@id='note-content']`).fill(note.content);
             await page.locator(`//button[@id='add-note']`).click();
         }
     })

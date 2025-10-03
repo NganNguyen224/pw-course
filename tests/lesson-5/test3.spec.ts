@@ -1,4 +1,4 @@
-import { Expect, test } from "@playwright/test";
+import { test } from "@playwright/test";
 
 test('Add TO-DO List', async ({ page }) => {
     await test.step('Navigate to website', async () => {

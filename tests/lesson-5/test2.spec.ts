@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { test } from '@playwright/test';
 
 test('Add product to cart', async ({ page }) => {
     await test.step('Navigate to website', async () => {
